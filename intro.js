@@ -1,6 +1,4 @@
-const time = 3;
-const minute = time * 60;
-console.log(minute, "minutes")
+
 
 // let year1= 6;
 // let  day = year1 * 365;
