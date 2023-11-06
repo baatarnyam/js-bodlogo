@@ -1,5 +1,5 @@
-const a = 2008
-if ((a % 2) == 0 && a > 1904 && (a/4 == ((a % 2) == 0)) ) {
+const a = 2022
+if (a % 4 == 0 && a > 1904) {
     console.log(true)
 }
 else (
