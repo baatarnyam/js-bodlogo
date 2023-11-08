@@ -1,8 +1,8 @@
+let n = 148
 let sondgoi = 0
-for(let i = 0; i <= 148; i++){
+for(let i = 0; i <= n; i++){
     if(i % 2 !== 0 ){
-        sondgoi = sondgoi + 1
+        sondgoi = sondgoi + i
     }
 }
 console.log(sondgoi)
-// console.log(sondgoi)
