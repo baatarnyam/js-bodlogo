@@ -23,7 +23,7 @@ if(d > 5){
     help++
 }
 if(help == 0) {
-    urjver = urjver * help
+    urjver = 0
     console.log(help)
 }
 else (
