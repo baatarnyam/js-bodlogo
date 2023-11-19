@@ -1,4 +1,3 @@
-
 const max = 1000
 const min = 100
 // let numbers = 0
