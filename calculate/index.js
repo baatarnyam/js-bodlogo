@@ -25,10 +25,7 @@ const nine = document.getElementById("nine")
 let operatop;
 let number;
 let result;
-let saver;
-
-let num1;
-let num2;
+let saver = 0;
 
 AC.addEventListener("click", (event) => {
     operatop = "ac"
@@ -47,7 +44,6 @@ mult.addEventListener("click", (event) => {
 });
 sum.addEventListener("click", (event) => {
     operatop = "+";
-    // saver.innerHTML = num1;
     output = ""
 });
 minus.addEventListener("click", (event) => {
@@ -60,12 +56,13 @@ dot.addEventListener("click", (event) => {
     operatop = "."
 });
 
-const a = () => {}
+output.addEventListener("change", (event) => {
+    output.innerHTML = parseFloat(event.target.innerHTML)
+});
 
 
 zero.addEventListener("click", (event) => {
-    number =  0;
-    output.innerHTML += number;
+    output.innerHTML += "0";
 });
 one.addEventListener("click", (event) => {
     number = 1;
