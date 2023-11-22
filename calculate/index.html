@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="layout">
+            <span id="output">0</span>
+            <!-- <span id="output2"></span> -->
+            <div id="row1">
+                <button class="btnFirst" id="ac">AC</button>
+                <button class="btnFirst" id="+/-">+/-</button>
+                <button class="btnFirst" id="%">%</button>
+                <button class="btnRight" id="/">/</button>
+            </div>
+
+            <div id="row2">
+                <button class="btnMid" id="seven">7</button>
+                <button class="btnMid" id="eight">8</button>
+                <button class="btnMid" id="nine">9</button>
+                <button class="btnRight" id="x">x</button>
+            </div>
+
+            <div id="row3">
+                <button class="btnMid" id="four">4</button>
+                <button class="btnMid" id="five">5</button>
+                <button class="btnMid" id="six">6</button>
+                <button class="btnRight" id="-">-</button>
+            </div>
+
+            <div id="row4">
+                <button class="btnMid" id="one">1</button>
+                <button class="btnMid" id="two">2</button>
+                <button class="btnMid" id="three">3</button>
+                <button class="btnRight" id="+">+</button>
+            </div>
+
+            <div id="row5">
+                <button class="btnZero" id="zero">0</button>
+                <button class="btnMid" id=".">.</button>
+                <button class="btnRight" id="=" onclick="uildel()" >=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
