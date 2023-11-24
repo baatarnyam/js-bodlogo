@@ -1,5 +1,4 @@
 const output = document.getElementById("output")
-const output2 = document.getElementById("output2")
 
 const AC = document.getElementById("ac")
 const surug = document.getElementById("+/-")
@@ -24,9 +23,33 @@ const eight = document.getElementById("eight")
 const nine = document.getElementById("nine")
 
 let operator;
-let number = ""
+let number = "";
 let result;
-let saver = 0
+let saver = 0;
+let clicked = false;
+
+const whenClicked = (whatNumber) => {
+  
+  if(output.innerHTML === "0"){
+    output.innerHTML = whatNumber
+  } else{
+    output.innerHTML = output/innerHTML + whatNumber
+  }
+}
+const clickedAfter = () => {
+  if(clicked === true) {
+    output.innerHTML = "0";
+    clicked = false;
+  }
+};
+const whenOperatorClicked = (whatOperator) => {
+  if (operator != "") {
+  computer();
+  }
+  operator = whatOperator;
+  clickedNumbers = input.value;
+  clickedlicked = true;
+ };
 
 
 surug.addEventListener("click", (event) => {

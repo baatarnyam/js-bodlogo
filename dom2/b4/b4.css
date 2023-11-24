@@ -1,0 +1,58 @@
+* {box-sizing: border-box;
+margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    
+}
+#layout {
+    width: 1200px;
+    height: 500px;
+    border: solid 3px black;
+}
+
+#top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    /* border: solid 1px black; */
+}
+#NumberRed{
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+}
+#NumberBlue{
+    color: blue;
+    font-size: 26px;
+    font-weight: bold;
+}
+#btn {
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 70%;
+    /* border: solid 1px red; */
+}
+#red{
+    background-color: red;
+    width: 50%;
+    height: 100%;
+}
+#blue{
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+}
