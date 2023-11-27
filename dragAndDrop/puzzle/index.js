@@ -6,6 +6,7 @@ const dropBox = document.querySelectorAll( ".puzzle div");
 
 let temporary;
 let count = 0
+let saver;
 
 dragImage.forEach( (el) =>{
     el.addEventListener("dragstart", (event) => {
@@ -28,8 +29,9 @@ dropBox.forEach( (el) =>{
     });
 });
 
-// const notDragel = () => {
-//     if(dragImage.el){
+const overlap = () => {
+    
+}
 
-//     }
-// }
+// appendChild iig blockloh
+//

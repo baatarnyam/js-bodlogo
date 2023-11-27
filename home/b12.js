@@ -1,4 +1,4 @@
-const n = [1,5,7,9,2, 11]
+const n = [12,1,5,7,9,2, 11]
 let max = 0
 
 for (let i = 0; i < n.length; i++) {

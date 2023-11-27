@@ -1,8 +1,15 @@
-let text = "lever"
+const text = "level"
 let p = ""
 
-for (let i = text.length - 1; i > 1; i--) {
-    p += text[i]
-    console.log(p);
+for (let i = 0; i < text.length; i++) {
+    p = p + text
+   if(p == text[i]){
+    console.log("mun");
     break;
+   }else{
+    console.log("bish");
+    break;
+   }
+    
 }
+
