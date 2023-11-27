@@ -5,8 +5,8 @@ const surug = document.getElementById("+/-")
 const modul = document.getElementById("%")
 const divide = document.getElementById("/")
 const mult = document.getElementById("x")
-const sum = document.getElementById("-")
-const minus = document.getElementById("+")
+const sum = document.getElementById("+")
+const minus = document.getElementById("-")
 const tentsuu = document.getElementById("=")
 const dot = document.getElementById(".")
 
@@ -22,88 +22,171 @@ const seven = document.getElementById("seven")
 const eight = document.getElementById("eight")
 const nine = document.getElementById("nine")
 
-let operatop;
-let number;
+let operator;
+let number = "";
 let result;
-let saver = 0;
+let saver;
+
+let num1;
+let num2;
 
 AC.addEventListener("click", (event) => {
-    operatop = "ac"
+    operator = "ac"
 });
 surug.addEventListener("click", (event) => {
-    operatop = "+/-"
+    // operator = "+/-"
 });
 modul.addEventListener("click", (event) => {
-    operatop = "%"
+    if( operator > 1){
+        giveResult()
+      }
+        operator = "%";
+        result = parseFloat(output.innerHTML)
+        number = "%"
+        output.innerHTML = result
+        saver++;
+        console.log("modul");
 });
 divide.addEventListener("click", (event) => {
-    operatop = "/"
+    if( operator > 1){
+        giveResult()
+      }
+        operator = "/";
+        result = parseFloat(output.innerHTML)
+        number = "/"
+        output.innerHTML = result
+        saver++;
+        console.log("huvaah");
 });
 mult.addEventListener("click", (event) => {
-    operatop = "x"
+    if( operator > 1){
+        giveResult()
+      }
+        operator = "*";
+        result = parseFloat(output.innerHTML)
+        number = "*"
+        output.innerHTML = result
+        saver++;
+        console.log("mult");
+
 });
 sum.addEventListener("click", (event) => {
     operatop = "+";
+    // saver.innerHTML = num1;
     output = ""
 });
 minus.addEventListener("click", (event) => {
-    operatop = "-"
+    if( operator > 1){
+        giveResult()
+      }
+        operator = "-";
+        result = parseFloat(output.innerHTML)
+        number = "-"
+        output.innerHTML = result
+        saver++;
+        console.log("minus");
 });
 tentsuu.addEventListener("click", (event) => {
-    operatop = "="
+    giveResult()
 });
 dot.addEventListener("click", (event) => {
-    operatop = "."
+    // operator = "."
 });
 
-output.addEventListener("change", (event) => {
+const a = () => {}
+
+output.addEventListener('change', (event) => {
     output.innerHTML = parseFloat(event.target.innerHTML)
 });
 
-
 zero.addEventListener("click", (event) => {
-    output.innerHTML += "0";
+    number =  0;
+    output.innerHTML += number;
 });
 one.addEventListener("click", (event) => {
-    number = 1;
-    output.innerHTML = number;
+    if(number!= "") {
+        output.innerHTML = "1";
+        number = ""
+      }else {
+        output.innerHTML += "1"
+        number = ""
+      }
 });
 two.addEventListener("click", (event) => {
-    number = 2;
-    output.innerHTML += number;
+    if(number != "") {
+        output.innerHTML= "2";
+        number= ""
+      }else {
+        output.innerHTML += "2"
+        number = ""
+      }
 });
 three.addEventListener("click", (event) => {
-    number = 3;
-    output.innerHTML += number;
+    if(number != "") {
+        output.innerHTML = "3";
+        number= ""
+      }else {
+        output.innerHTML += "3"
+        number = ""
+      }
 });
 four.addEventListener("click", (event) => {
-    number = 4;
-    output.innerHTML += number;
+    if(number != "") {
+        output.innerHTML= "4";
+        number = ""
+      }else {
+        output.innerHTML+= "4"
+        number= ""
+      }
 });
 five.addEventListener("click", (event) => {
-    number = 5;
-    output.innerHTML += number;
+    if(number!= "") {
+        output.innerHTML= "5";
+        number = ""
+      }else {
+        output.innerHTML+= "5"
+        number= ""
+      }
 });
 six.addEventListener("click", (event) => {
-    number = 6;
-    output.innerHTML += number;
+    if(number != "") {
+        output.innerHTML= "6";
+        number= ""
+      }else {
+        output.innerHTML += "6"
+        number = ""
+      }
 });
 seven.addEventListener("click", (event) => {
-    number = 7;
-    output.innerHTML += number;
+    if(number != "") {
+        output.innerHTML= "7";
+        number= ""
+      }else {
+        output.innerHTML += "7"
+        number = ""
+      }
 });
 eight.addEventListener("click", (event) => {
-    number = 8;
-    output.innerHTML += number;
+    if(number != "") {
+        output.innerHTML= "8";
+        number = ""
+      }else {
+        output.innerHTML+= "8"
+        number= ""
+      }
 });
 nine.addEventListener("click", (event) => {
-    number = 9;
-    output.innerHTML += number;
+    if(number!= "") {
+        output.innerHTML = "9";
+        number= ""
+      }else {
+        output.innerHTML+= "9"
+        number = ""
+      }
 });
 
 AC.addEventListener("click", (event) => {
-    number = "";
-    output.innerHTML = number;
+    output.innerHTML = "";
 });
 surug.addEventListener("click", (event) => {
     number = -number;
@@ -112,25 +195,21 @@ surug.addEventListener("click", (event) => {
 
 
 const uildel = () => {
-    switch (operatop) {
-        case "+/-":
-            result = -num1, -num2
-        break;
-        case "%":
-            result = num1 % num2
-        break;
-        case "/":
-            result = num1 / num2
-        break;
-        case "x":
-            result = num1 * num2
-        break;
-        case "-":
-            result = num1 - num2
-        break;
-        case "+":
-            result = num1 + num2;
-        break;
-    }
+   giveResult()
     output.innerHTML = result;
+}
+
+const giveResult = () => {
+    switch(operator){
+      case "*": result = result * parseFloat(output.innerHTML)
+      break;
+      case "/": result = result / parseFloat(output.innerHTML)
+      break;
+      case "-": result = result - parseFloat(output.innerHTML)
+      break;
+      case "+": result = result + parseFloat(output.innerHTML)
+      break;
+      case "%": result = result % parseFloat(output.innerHTML)
+      break;
+  }
 }
