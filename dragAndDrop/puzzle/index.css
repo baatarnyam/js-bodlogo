@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#logo{
+    width: 600px;
+    height: 150px;
+}
+
+
+.puzzle {
+    width: 765px;
+    height: 765px;
+    border: solid 5px blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.div {
+    width: 250px;
+    height: 250px;
+}
+.img {
+    width: 250px;
+    height: 250px;
+    border: solid 1px blue;
+}
+#div1 {
+    width: 250px;
+    height: 250px;
+    border: solid 1px blue;
+}
+
+#counter {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
